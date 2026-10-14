@@ -1,4 +1,4 @@
-from flask import Flask,request
+from flask import Flask,request,render_template
 
 
 app = Flask(__name__)
@@ -11,11 +11,11 @@ app = Flask(__name__)
 #    return f"Hello: {name}"
 
 #multiple read query parameter
-@app.route("/search")
-def search():
-    name=request.args.get("name") 
-    course=request.args.get("course")  
-    return f"Hello: {name} is learning {course}"
+@app.route("/")
+def home():
+    #name=request.args.get("name") 
+    #course=request.args.get("course")  
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
