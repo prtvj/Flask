@@ -4,7 +4,15 @@
     <title>Hello World Page</title>
 </head>
 <body>
-    <h1>Hello, {{ name }}!</h1>
-    <p>This is My HTML PAGE </p>
+    <h1>{{first_name}} {{last_name}}</h1>
+    <h1>{{first_name | upper}}</h1>   {#FILTERS #}
+    <h1>{{first_name | lower}}</h1>   {#FILTERS #}
+    <h1> {{"mohit kumar" | title}}</h1>
+    <h1> Total Course {{course |length}}</h1>  {#Expresssion   ----Wau to give comments#} 
+    <h1>Hello !</h1>
+    <p>AGE{{age}} </p>
+    <p>PRICE{{price}} </p>
+    <p>GST INCLUDED {{price+90}}</p>
+    <p>{{10*3}}</p>
 </body>
 </html>

@@ -15,8 +15,13 @@ app = Flask(__name__)
 def home():
     #name=request.args.get("name") 
     #course=request.args.get("course")  
-    name="Mohit"
-    return render_template("index.html",name=name)
+    first_name="Mohit"
+    last_name="Kumar"
+    age=23
+    price=500
+    course=["Python", "Java", "C++"]
+    return render_template("index.html",first_name=first_name,last_name=last_name
+                           ,age=age,price=price,course=course)
 
 if __name__ == "__main__":
     app.run(debug=True)
