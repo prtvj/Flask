@@ -4,15 +4,18 @@
     <title>Hello World Page</title>
 </head>
 <body>
-    <h1>{{first_name}} {{last_name}}</h1>
-    <h1>{{first_name | upper}}</h1>   {#FILTERS #}
-    <h1>{{first_name | lower}}</h1>   {#FILTERS #}
-    <h1> {{"mohit kumar" | title}}</h1>
-    <h1> Total Course {{course |length}}</h1>  {#Expresssion   ----Wau to give comments#} 
-    <h1>Hello !</h1>
-    <p>AGE{{age}} </p>
-    <p>PRICE{{price}} </p>
-    <p>GST INCLUDED {{price+90}}</p>
-    <p>{{10*3}}</p>
+    {% if is_logged_in %}
+    <h1> Welcome</h1>
+    {% else %}
+    <h1> Please log in</h1>
+    {% endif %}
+
+    {% if marks>80 %}
+    <h1>A grade </h1>
+    {% elif marks>60 %}
+    <h1>B grade </h1>
+    {% else %}
+    <h1>C grade</h1>
+    {% endif %}
 </body>
 </html>
